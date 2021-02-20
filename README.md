@@ -9,7 +9,7 @@ Para realização dos testes, banco de dados já foi popularizado com dois usuá
 ```json
 {
 	"name": "Default Admin",
-	"email": "default_email@email.com",
+	"email": "default_admin@email.com",
 	"password": "123456"
 }
 ```
