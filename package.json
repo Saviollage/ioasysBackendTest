@@ -1,0 +1,36 @@
+{
+  "name": "teste-backend",
+  "version": "1.0.0",
+  "description": "Estes documento README tem como objetivo fornecer as informações necessárias para realização do projeto de avaliação de candidatos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha --exist test/",
+    "test:dev": "npx mocha test/ -w",
+    "test:cov": "npx nyc --reporters=html,text npm test",
+    "dev": "npx nodemon src/index",
+    "start": "node src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/ioasys/teste-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/ioasys/teste-backend#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chai": "^4.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^8.3.0",
+    "mongoose": "^5.11.15",
+    "nodemon": "^2.0.7",
+    "pino": "^6.11.1",
+    "pino-pretty": "^4.5.0",
+    "supertest": "^6.1.3",
+    "swagger-ui-express": "^4.1.6"
+  }
+}
