@@ -9,7 +9,10 @@
     }
   },
 
-  "servers": [{ "url": "http://localhost:3000" }],
+  "servers": [
+    { "url": "https://ioasys-backend-test.herokuapp.com/" },
+    { "url": "http://localhost:3000" }
+  ],
   "paths": {
     "/authenticate": {
       "post": {
