@@ -1,11 +1,11 @@
 # Teste backend ioasys
 
-## Documentação
+## 📃 Documentação
 A documentação desenvolvida para este projeto pode ser acessada por meio [DESTE LINK](https://ioasys-backend-test.herokuapp.com/api-docs)
 
-## Dados de teste
+## 🎲 Dados de teste
 Para realização dos testes, banco de dados já foi popularizado com dois usuários: 
-- Administrador
+- 👤 Administrador
 ```json
 {
 	"name": "Default Admin",
@@ -14,7 +14,7 @@ Para realização dos testes, banco de dados já foi popularizado com dois usuá
 }
 ```
 
-- Usuário
+- 👤 Usuário
 ```json
 {
 	"name": "Default User",
