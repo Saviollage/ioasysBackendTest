@@ -16,7 +16,6 @@ const UserSchema = new mongoose.Schema({
     },
     email: {
         type: String,
-        unique: true,
         required: true,
         lowercase: true
     },
@@ -32,8 +31,10 @@ const UserSchema = new mongoose.Schema({
 });
 
 UserSchema.pre("save", async function (next) {
-    const hashPass = await hash(this.password, 10);
-    this.password = hashPass;
+    if (this.password) {
+        const hashPass = await hash(this.password, 10);
+        this.password = hashPass;
+    }
     next();
 });
 

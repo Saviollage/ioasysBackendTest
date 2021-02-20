@@ -1,3 +1,29 @@
+# Teste backend ioasys
+
+## Documentação
+A documentação desenvolvida para este projeto pode ser acessada por meio [DESTE LINK](https://ioasys-backend-test.herokuapp.com/api-docs)
+
+## Dados de teste
+Para realização dos testes, banco de dados já foi popularizado com dois usuários: 
+- Administrador
+```json
+{
+	"name": "Default Admin",
+	"email": "default_email@email.com",
+	"password": "123456"
+}
+```
+
+- Usuário
+```json
+{
+	"name": "Default User",
+	"email": "default_user@email.com",
+	"password": "123456"
+}
+```
+#
+
 # Sobre
 
 Estes documento README tem como objetivo fornecer as informações necessárias para realização do projeto de avaliação de candidatos.

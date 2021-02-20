@@ -81,7 +81,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/EditUser"
               }
             }
           }
@@ -161,7 +161,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "format": "uuid",
+              "format": "string",
               "type": "string"
             }
           }
@@ -170,7 +170,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/EditUser"
               }
             }
           }
@@ -199,7 +199,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "format": "uuid",
+              "format": "string",
               "type": "string"
             }
           }
@@ -329,7 +329,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "format": "uuid",
+              "format": "string",
               "type": "string"
             }
           }
@@ -356,17 +356,6 @@
 
         "description": "Apenas usuarios logados podem votar",
         "operationId": "vote",
-        "parameters": [
-          {
-            "name": "movieId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "format": "uuid",
-              "type": "string"
-            }
-          }
-        ],
         "security": [{ "bearerAuth": [] }],
         "requestBody": {
           "content": {
@@ -445,12 +434,24 @@
           }
         }
       },
+      "EditUser": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+
+          "email": {
+            "type": "string"
+          }
+        }
+      },
       "Vote": {
         "type": "object",
         "properties": {
           "movieId": {
             "type": "string",
-            "format": "uuid"
+            "format": "string"
           },
 
           "vote": {
@@ -465,7 +466,7 @@
         "properties": {
           "email": {
             "type": "string",
-            "example": "default_email@gmail.com"
+            "example": "default_admin@email.com"
           },
           "password": {
             "type": "string",

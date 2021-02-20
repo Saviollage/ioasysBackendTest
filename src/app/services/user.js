@@ -12,7 +12,7 @@ class UserService {
 
     _generateToken(id) {
         return sign({ id }, key, {
-            expiresIn
+            expiresIn: expiresIn
         });
     }
 
@@ -126,7 +126,7 @@ class UserService {
             await this.findByMail(params.email)
             user.email = params.email
         }
-        await this.userRepository.updateOne(user)
+        await user.save()
         return user
     }
 
@@ -139,7 +139,7 @@ class UserService {
     async delete(id) {
         const user = await this.findById(id)
         user.isActive = false
-        await this.userRepository.updateOne(user)
+        await user.save()
         return user
     }
 

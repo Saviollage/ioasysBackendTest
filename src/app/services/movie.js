@@ -30,7 +30,7 @@ class MovieService {
         if (!objectId.isValid(id))
             throw {
                 code: 400,
-                message: `Please provide a valid ID`
+                message: `Please provide a valid movie ID`
             }
         const movie = await this.movieRepository
             .findById(id)

@@ -62,11 +62,12 @@ router.post("/", authMiddleware, async (request, response) => {
 router.post('/vote', authMiddleware, async (request, response) => {
     try {
         await userService.isActiveUser(request.userId)
-        const { moveId, vote } = request.body
-        const data = await movieService.vote(moveId, vote)
-        logger.info(`[ MOVIES | VOTE ] - User [${request.userId}] Vote [${vote}] on Movie [${moveId}]`)
+        const { movieId, vote } = request.body
+        const data = await movieService.vote(movieId, vote)
+        logger.info(`[ MOVIES | VOTE ] - User [${request.userId}] Vote [${vote}] on Movie [${movieId}]`)
         return response.status(200).send(data);
     } catch (err) {
+        console.log(err)
         if (err.code)
             return response.status(err.code).send({ error: err.message })
         else {
