@@ -15,7 +15,8 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use('*', (request, response) => {
     return response.status(404).json({
-        error: 'Endpoint Not Found'
+        error: 'Endpoint Not Found',
+        message: "Please check our documentation here: https://ioasys-backend-test.herokuapp.com/api-docs/"
     })
 });
 
