@@ -25,7 +25,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "mocha": "^8.3.0",
+    "mocha": "^10.2.0",
     "mongoose": "^5.11.15",
     "nodemon": "^2.0.7",
     "pino": "^6.11.1",
